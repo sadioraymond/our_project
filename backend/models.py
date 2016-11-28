@@ -7,7 +7,7 @@ class Abonnement(models.Model):
     date = models.DateField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'abonnement'
 
 
@@ -18,7 +18,7 @@ class Administrateur(models.Model):
     datefin = models.DateField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'administrateur'
 
 
@@ -27,7 +27,7 @@ class Article(models.Model):
     id_type = models.ForeignKey('TypeArticle', models.DO_NOTHING, db_column='id_type')
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'article'
 
 
@@ -35,7 +35,7 @@ class BoiteAIdee(models.Model):
     libelle = models.CharField(max_length=30)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'boite_a_idee'
 
 
@@ -48,7 +48,7 @@ class Commentaire(models.Model):
     date = models.DateField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'commentaire'
 
 
@@ -58,7 +58,7 @@ class DetailAcces(models.Model):
     date = models.DateField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'detail_acces'
 
 
@@ -69,7 +69,7 @@ class DetailArticle(models.Model):
     date_art = models.DateField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'detail_article'
 
 
@@ -79,7 +79,7 @@ class DetailEvenement(models.Model):
     date = models.DateField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'detail_evenement'
 
 
@@ -89,7 +89,7 @@ class DetailSession(models.Model):
     id_session = models.IntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'detail_session'
 
 
@@ -99,7 +99,7 @@ class DetailUtilisateur(models.Model):
     date = models.DateField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'detail_utilisateur'
 
 
@@ -107,7 +107,7 @@ class DroitDAcces(models.Model):
     libelle = models.CharField(max_length=30)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'droit_d_acces'
 
 
@@ -120,7 +120,7 @@ class Evenement(models.Model):
     date = models.DateField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'evenement'
 
 
@@ -130,7 +130,7 @@ class Faq(models.Model):
     date = models.DateField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'faq'
 
 
@@ -140,7 +140,7 @@ class Idee(models.Model):
     id_boite = models.ForeignKey(BoiteAIdee, models.DO_NOTHING, db_column='id_boite')
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'idee'
 
 
@@ -150,7 +150,7 @@ class NoteArticle(models.Model):
     note = models.CharField(max_length=1)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'note_article'
 
 
@@ -160,7 +160,7 @@ class NoteStructure(models.Model):
     note = models.CharField(max_length=1)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'note_structure'
 
 
@@ -171,7 +171,7 @@ class Notification(models.Model):
     date = models.DateField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'notification'
 
 
@@ -182,7 +182,7 @@ class Publication(models.Model):
     date = models.DateField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'publication'
 
 
@@ -192,7 +192,7 @@ class Session(models.Model):
     datefin = models.DateField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'session'
 
 
@@ -202,7 +202,7 @@ class SousStructure(models.Model):
     id_type = models.ForeignKey('TypeStructure', models.DO_NOTHING, db_column='id_type')
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'sous_structure'
 
 
@@ -216,7 +216,7 @@ class Structure(models.Model):
     id_type = models.ForeignKey('TypeStructure', models.DO_NOTHING, db_column='id_type')
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'structure'
 
 
@@ -224,7 +224,7 @@ class TypeArticle(models.Model):
     libelle = models.CharField(max_length=30)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'type_article'
 
 
@@ -232,7 +232,7 @@ class TypeEvenement(models.Model):
     libelle = models.IntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'type_evenement'
 
 
@@ -240,7 +240,7 @@ class TypeStructure(models.Model):
     libelle = models.CharField(max_length=30)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'type_structure'
 
 
@@ -248,7 +248,7 @@ class TypeUtilisateur(models.Model):
     libelle = models.IntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'type_utilisateur'
 
 
@@ -263,5 +263,5 @@ class Utilisateur(models.Model):
     tel = models.CharField(max_length=50)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'utilisateur'
